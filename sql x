@@ -1,0 +1,11 @@
+SELECT 
+    u.name AS nama_user,
+    COUNT(r.user_id) AS total_bidang_liputan
+FROM 
+    users u
+JOIN 
+    reporter r ON u.user_id = r.user_id
+WHERE 
+    u.role = 'reporter'
+GROUP BY 
+    u.user_id, u.name;-
