@@ -1,0 +1,22 @@
+INSERT INTO users (name, email, role) VALUES
+('Andi Pratama', 'andi.pratama@portal.com', 'penulis'),
+('Siti Rahma', 'siti.rahma@portal.com', 'reporter'),
+('Budi Santoso', 'budi.santoso@portal.com', 'reporter');
+
+INSERT INTO kategori (name) VALUES
+('Teknologi'),
+('Politik'),
+('Olahraga');
+
+INSERT INTO reporter (user_id, bidang_liputan) VALUES
+(2, 'Politik Nasional'),
+(3, 'Olahraga & Internasional');
+
+SELECT * FROM users ;
+
+UPDATE reporter 
+SET bidang_liputan = 'Politik dan Hukum' 
+WHERE user_id = 2;
+
+DELETE FROM reporter
+WHERE  user_id = 3;
